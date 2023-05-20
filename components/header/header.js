@@ -9,7 +9,7 @@ const Header = () => {
       </div>
       <div className={styles.buttons}>
         <button>
-          <img src="/home.png" alt="Ana Sayfa" />
+          <img src="/Home.png" alt="Ana Sayfa" />
           <span>Ana Sayfa</span>
         </button>
         <button>
