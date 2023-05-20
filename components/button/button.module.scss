@@ -1,0 +1,21 @@
+.button {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: background-color 0.2s;
+}
+
+.button.visible {
+  animation: buttonAnimation 1s forwards;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  100% {
+    background-color: #000000;
+  }
+}

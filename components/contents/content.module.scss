@@ -1,0 +1,80 @@
+.mainContainer {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: background-color 0.2s;
+}
+.container {
+  width: 70%;
+  margin: 20px auto;
+  h1 {
+    font-size: 0px;
+    color: rgb(255, 255, 255);
+  }
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .h2 {
+      font-size: 23px;
+      margin-left: 20px;
+      font-weight: 300;
+    }
+    .img {
+      margin-top: 20px;
+    }
+  }
+}
+
+.mainContainer.visible {
+  animation: backgroundAnimation 1s forwards;
+}
+
+.mainContainer.visible .container .img {
+  animation: imageAnimation 0.5s forwards;
+}
+.mainContainer.visible .container .h1 {
+  animation: titleAnimation 0.5s forwards;
+}
+
+.mainContainer.visible .container .h2 {
+  animation: explainAnimation 0.5s forwards;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #ffffff;
+    border-color: transparent;
+  }
+  100% {
+    background-color: #005f1e;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+
+@keyframes explainAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
