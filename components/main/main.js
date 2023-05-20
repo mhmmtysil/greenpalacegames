@@ -10,7 +10,7 @@ const Main = () => {
         <img src="/targetIcon.png" alt="Resim 1" className={styles.target} />
       </div>
       <div className={styles.rightColumn}>
-        <img src="/phoneVisual.png" alt="Resim 2" />
+        <img src="/PhoneVisual.png" alt="Resim 2" />
       </div>
     </div>
   );
