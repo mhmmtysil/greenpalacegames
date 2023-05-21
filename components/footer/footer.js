@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./footer.module.scss";
-
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -9,10 +9,12 @@ const Footer = () => {
           <img src="/aboutus.png" alt="AboutUs" />
           <span>Hakkımızda</span>
         </button>
-        <button>
-          <img src="/privacypolicy.png" alt="privacypolicy" />
-          <span>Gizlilik Politikası</span>
-        </button>
+        <Link href="/privacypolicy">
+          <button>
+            <img src="/privacypolicy.png" alt="privacypolicy" />
+            <span>Gizlilik Politikası</span>
+          </button>
+        </Link>
         <button>
           <img src="/faq.png" alt="FAQ" />
           <span>Sıkça Sorulan Sorular</span>

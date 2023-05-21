@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./header.module.scss";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -7,11 +8,14 @@ const Header = () => {
       <div className={styles.logo}>
         <h1>Green Palace Games</h1>
       </div>
+
       <div className={styles.buttons}>
-        <button>
-          <img src="/Home.png" alt="Ana Sayfa" />
-          <span>Ana Sayfa</span>
-        </button>
+        <Link href="/">
+          <button>
+            <img src="/Home.png" alt="Ana Sayfa" />
+            <span>Ana Sayfa</span>
+          </button>
+        </Link>
         <button>
           <span>Oyunlarımız</span>
         </button>
