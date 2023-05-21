@@ -32,3 +32,31 @@
 .rightColumn {
   margin-right: 5%;
 }
+.rightColumn img{
+  width: 400px;
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 990px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .leftColumn .stars {
+    width: 200px;
+  }
+}
+@media (max-width: 440px) {
+
+  .rightColumn img{
+    width: 300px;
+  }
+  .leftColumn .stars {
+    width: 100px;
+  }
+}

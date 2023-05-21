@@ -5,7 +5,9 @@ import styles from "@/styles/Home.module.css";
 import Header from "../../components/header/header";
 import Main from "../../components/main/main";
 import Footer from "../../components/footer/footer";
-import Contents from "../../components/contents/contents";
+import WordEmperor from "../../components/contents/WordEmperor/wordemperor";
+import RouletteRoyale from "../../components/contents/RouletteRoyale/rouletteroyale";
+import Game2048 from "../../components/contents/2048/2048";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,7 +21,10 @@ export default function Home() {
       </Head>
       <Header />
       <Main />
-      <Contents />
+      <WordEmperor />
+      <RouletteRoyale />
+      <Game2048 />
+      {/* <Contents /> */}
       <Footer />
     </>
   );

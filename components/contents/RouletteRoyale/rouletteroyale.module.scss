@@ -1,0 +1,167 @@
+.mainContainer {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: background-color 0.2s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.container {
+  width: 70%;
+  margin: 20px auto;
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .rowContainer {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .h2 {
+        font-size: 23px;
+        margin-left: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+      .storeImg {
+        margin-left: 20px;
+        width: 250px;
+        margin-top: 10px;
+      }
+    }
+
+    .img {
+      margin-top: 20px;
+    }
+  }
+}
+
+.mainContainer.visible {
+  animation: backgroundAnimation 1s forwards;
+}
+
+.mainContainer.visible .container .img {
+  animation: imageAnimation 0.5s forwards;
+}
+.mainContainer.visible .container .h1 {
+  animation: titleAnimation 0.5s forwards;
+}
+
+.mainContainer.visible .container .contentContainer .rowContainer .storeImg {
+  animation: imageAnimationRight 0.5s forwards;
+}
+
+.mainContainer .container .h1 {
+  font-size: 35px;
+}
+
+.mainContainer.visible .container .h2 {
+  animation: explainAnimation 0.5s forwards;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #ffffff;
+    border-color: transparent;
+  }
+  100% {
+    background-color: #ce0000;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageAnimationRight {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes explainAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .mainContainer .container {
+    width: 80%;
+  }
+  .mainContainer .container .h1 {
+    font-size: 35px;
+  }
+  .contentContainer .rowContainer .storeImg {
+    width: 250px;
+  }
+}
+@media (max-width: 990px) {
+  .mainContainer .container {
+    width: 90%;
+  }
+  .mainContainer .container .h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer .container {
+    width: 95%;
+  }
+  .mainContainer .container .h1 {
+    font-size: 25px;
+  }
+  .mainContainer .container .contentContainer .img {
+    width: 140px;
+  }
+  .mainContainer .container .contentContainer .rowContainer .h2 {
+    font-size: 20px;
+  }
+  .mainContainer .container .contentContainer .rowContainer .storeImg {
+    width: 180px;
+  }
+}
+@media (max-width: 440px) {
+  .mainContainer .container .h1 {
+    font-size: 20px;
+  }
+  .mainContainer .container .contentContainer .img {
+    width: 120px;
+  }
+  .mainContainer .container .contentContainer .rowContainer .h2 {
+    font-size: 14px;
+  }
+  .mainContainer .container .contentContainer .rowContainer .storeImg {
+    width: 150px;
+  }
+}
