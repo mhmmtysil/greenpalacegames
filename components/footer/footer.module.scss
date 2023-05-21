@@ -17,7 +17,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 40%;
   }
 
   .container button {
@@ -31,5 +30,68 @@
   .container button span {
     margin-left: 10px;
     color: black;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer .container button span {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  .footer .p {
+    margin-top: 0px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 990px) {
+  .footer .container button span {
+    margin-left: 8px;
+    font-size: 16px;
+  }
+  .footer .p {
+    margin-top: 0px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .container button span {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .footer .container button {
+    padding-inline: 10px;
+  }
+  .footer .container button img {
+    width: 25px;
+  }
+  .footer .p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 440px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .container button span {
+    margin-left: 4px;
+    font-size: 10px;
+  }
+  .footer .p {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .footer .container button {
+    padding-inline: 3px;
+  }
+  .footer .container button img {
+    width: 25px;
   }
 }

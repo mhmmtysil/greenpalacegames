@@ -24,7 +24,6 @@ export default function Home() {
       <WordEmperor />
       <RouletteRoyale />
       <Game2048 />
-      {/* <Contents /> */}
       <Footer />
     </>
   );

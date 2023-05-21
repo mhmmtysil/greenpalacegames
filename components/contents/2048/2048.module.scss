@@ -41,6 +41,7 @@
 
     .img {
       margin-top: 20px;
+      width: 200px;
     }
   }
 }
@@ -124,6 +125,9 @@
   .contentContainer .rowContainer .storeImg {
     width: 250px;
   }
+  .mainContainer .container .contentContainer .img {
+    width: 200px;
+  }
 }
 @media (max-width: 990px) {
   .mainContainer .container {
@@ -131,6 +135,9 @@
   }
   .mainContainer .container .h1 {
     font-size: 30px;
+  }
+  .mainContainer .container .contentContainer .img {
+    width: 160px;
   }
 }
 

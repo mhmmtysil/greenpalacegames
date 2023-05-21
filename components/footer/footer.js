@@ -22,7 +22,7 @@ const Footer = () => {
           <span>İletişim</span>
         </button>
       </div>
-      <p className={styles.p}>Telif Hakkı © 2023 Web Sitenizin Adı</p>
+      <p className={styles.p}>© 2023 Green Palace Games</p>
     </footer>
   );
 };
