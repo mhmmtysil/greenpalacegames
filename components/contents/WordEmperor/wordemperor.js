@@ -20,19 +20,23 @@ const WordEmperor = () => {
   }, []);
   return (
     <div className={`${styles.mainContainer} ${visible ? styles.visible : ""}`}>
-      <h1 className={styles.h1}>Kelime İmparatoru</h1>
       <div className={styles.container}>
         <div className={styles.contentContainer}>
-          <img className={styles.img} src="/kelime.png" alt="kelimeimparatoru" />
+          <img
+            className={styles.img}
+            src="/kelime/kelimesol.png"
+            alt="kelimeimparatoru"
+          />
           <div className={styles.rowContainer}>
+            <h1 className={styles.h1}>Kelime İmparatoru</h1>
             <h2 className={styles.h2}>
               Kelimelerin İmparatoru olmaya hazır mısın? Bölümlerde verilen
               harflerle ne kadar kelime türetebilirsin? Tek yapman gereken
               verilen harfler üzerinde parmağını gezdirerek kelimeleri bulmaya
               çalışmak.
             </h2>
-            <img className ={styles.storeImg} src="/appstoredown.png"></img>
-            <img className ={styles.storeImg} src="/playstoredown.png"></img>
+            <img className={styles.storeImg} src="/appstoredown.png"></img>
+            <img className={styles.storeImg} src="/playstoredown.png"></img>
           </div>
         </div>
       </div>

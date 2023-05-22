@@ -1,7 +1,7 @@
 import styles from "./rouletteroyale.module.scss";
 import React, { useEffect, useState } from "react";
 
-const RouletteRoyale = () => {
+const WordEmperor = () => {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -20,19 +20,21 @@ const RouletteRoyale = () => {
   }, []);
   return (
     <div className={`${styles.mainContainer} ${visible ? styles.visible : ""}`}>
-      <h1 className={styles.h1}>Roulette Casino Royale</h1>
       <div className={styles.container}>
         <div className={styles.contentContainer}>
-          <img className={styles.img} src="/kelime.png" alt="AboutUs" />
+          <img
+            className={styles.img}
+            src="/roulette/rouletteleft.png"
+            alt="kelimeimparatoru"
+          />
           <div className={styles.rowContainer}>
+            <h1 className={styles.h1}>Roulette Casino Royale</h1>
             <h2 className={styles.h2}>
-              Kelimelerin İmparatoru olmaya hazır mısın? Bölümlerde verilen
-              harflerle ne kadar kelime türetebilirsin? Tek yapman gereken
-              verilen harfler üzerinde parmağını gezdirerek kelimeleri bulmaya
-              çalışmak.
+              Gerçek oyuncularla beraber oynayabileceğin sıra dışı 3 Boyutlu bir
+              Rulet deneyimine hazır mısın? Hemen kaydol ve heyecanı kaçırma!
             </h2>
-            <img className ={styles.storeImg} src="/appstoredown.png"></img>
-            <img className ={styles.storeImg} src="/playstoredown.png"></img>
+            <img className={styles.storeImg} src="/appstoredown.png"></img>
+            <img className={styles.storeImg} src="/playstoredown.png"></img>
           </div>
         </div>
       </div>
@@ -40,4 +42,4 @@ const RouletteRoyale = () => {
   );
 };
 
-export default RouletteRoyale;
+export default WordEmperor;

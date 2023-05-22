@@ -6,7 +6,7 @@ const Game2048 = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 900) {
+      if (scrollPosition > 700) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -20,16 +20,17 @@ const Game2048 = () => {
   }, []);
   return (
     <div className={`${styles.mainContainer} ${visible ? styles.visible : ""}`}>
-      <h1 className={styles.h1}>2048</h1>
       <div className={styles.container}>
         <div className={styles.contentContainer}>
-          <img className={styles.img} src="/2048.png" alt="2048" />
+          <img
+            className={styles.img}
+            src="/2048/2048left.png"
+            alt="kelimeimparatoru"
+          />
           <div className={styles.rowContainer}>
+            <h1 className={styles.h1}>2048</h1>
             <h2 className={styles.h2}>
-              Kelimelerin İmparatoru olmaya hazır mısın? Bölümlerde verilen
-              harflerle ne kadar kelime türetebilirsin? Tek yapman gereken
-              verilen harfler üzerinde parmağını gezdirerek kelimeleri bulmaya
-              çalışmak.
+              Klasikleşmiş 2048 deneyimine hazır mısın?
             </h2>
             <img className={styles.storeImg} src="/appstoredown.png"></img>
             <img className={styles.storeImg} src="/playstoredown.png"></img>

@@ -15,10 +15,12 @@ const Footer = () => {
             <span>Gizlilik Politikası</span>
           </button>
         </Link>
-        <button>
-          <img src="/faq.png" alt="FAQ" />
-          <span>Sıkça Sorulan Sorular</span>
-        </button>
+        <Link href="/faq">
+          <button>
+            <img src="/faq.png" alt="FAQ" />
+            <span>Sıkça Sorulan Sorular</span>
+          </button>
+        </Link>
         <button>
           <img src="/contact.png" alt="FAQ" />
           <span>İletişim</span>

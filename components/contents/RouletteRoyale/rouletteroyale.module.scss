@@ -10,7 +10,7 @@
   margin-top: 20px;
 }
 .container {
-  width: 70%;
+  width: 90%;
   margin: 20px auto;
   h1 {
     color: rgb(255, 255, 255);
@@ -25,7 +25,11 @@
       margin-left: 10px;
       display: flex;
       flex-direction: column;
-
+      width: 80%;
+      .h1 {
+        margin-left: 20px;
+        margin-bottom: 5px;
+      }
       .h2 {
         font-size: 23px;
         margin-left: 20px;
@@ -62,7 +66,7 @@
 }
 
 .mainContainer .container .h1 {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .mainContainer.visible .container .h2 {
@@ -71,11 +75,13 @@
 
 @keyframes backgroundAnimation {
   0% {
-    background-color: #ffffff;
+    opacity: 0;
+    background-image: url("../../../public/roulette/roulettebg.png");
     border-color: transparent;
   }
   100% {
-    background-color: #ce0000;
+    opacity: 1;
+    background-image: url("../../../public/roulette/roulettebg.png");
   }
 }
 
