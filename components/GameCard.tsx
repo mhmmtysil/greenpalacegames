@@ -32,7 +32,6 @@ export default function GameCard({ game }: GameCardProps) {
               alt={game.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
-              unoptimized
             />
           </div>
           
@@ -45,7 +44,6 @@ export default function GameCard({ game }: GameCardProps) {
                 width={64}
                 height={64}
                 className="object-contain"
-                unoptimized
               />
             </div>
           </div>

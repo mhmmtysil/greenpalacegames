@@ -43,7 +43,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                                 width={48}
                                 height={48}
                                 className="object-contain"
-                                unoptimized
                             />
                         </div>
                         <div>
@@ -60,7 +59,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                     </p>
                 </div>
             </section>
-            
+
             {/* Content */}
             <div className="max-w-5xl mx-auto px-4 py-16">
                 <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">
@@ -90,7 +89,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
 
                     <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Oyun Hakkında</h2>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                             {game.description}
                         </p>
                     </div>
