@@ -2,6 +2,7 @@ import { games } from '@/lib/games';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { getAssetPath } from '@/lib/utils';
 
 export function generateStaticParams() {
     return games.map((game) => ({
@@ -37,7 +38,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                     <div className="flex items-center gap-4 mb-3">
                         <div className="relative w-16 h-16 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2">
                             <Image
-                                src={game.logo}
+                                src={getAssetPath(game.logo)}
                                 alt={`${game.title} Logo`}
                                 width={48}
                                 height={48}

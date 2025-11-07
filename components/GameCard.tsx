@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Game } from '@/lib/games';
+import { getAssetPath } from '@/lib/utils';
 
 interface GameCardProps {
   game: Game;
@@ -27,7 +28,7 @@ export default function GameCard({ game }: GameCardProps) {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src={game.image}
+              src={getAssetPath(game.image)}
               alt={game.title}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -39,7 +40,7 @@ export default function GameCard({ game }: GameCardProps) {
           <div className="absolute top-4 left-4 z-10">
             <div className="relative w-20 h-20 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
               <Image
-                src={game.logo}
+                src={getAssetPath(game.logo)}
                 alt={`${game.title} Logo`}
                 width={64}
                 height={64}
