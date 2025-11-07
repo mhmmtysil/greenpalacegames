@@ -6,7 +6,7 @@ export default function GamesPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
       <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Oyunlarımız
           </h1>
@@ -20,8 +20,14 @@ export default function GamesPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {games.map((game) => (
-              <GameCard key={game.id} game={game} />
+            {games.map((game, index) => (
+              <div 
+                key={game.id}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <GameCard game={game} />
+              </div>
             ))}
           </div>
         </div>

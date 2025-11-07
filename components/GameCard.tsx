@@ -21,7 +21,7 @@ export default function GameCard({ game }: GameCardProps) {
 
   return (
     <Link href={`/games/${game.id}`}>
-      <div className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+      <div className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
         {/* Image */}
         <div className="relative h-64 bg-gradient-to-br from-purple-500 to-blue-600 overflow-hidden">
           {/* Background Image */}
@@ -30,14 +30,14 @@ export default function GameCard({ game }: GameCardProps) {
               src={game.image}
               alt={game.title}
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
               unoptimized
             />
           </div>
           
           {/* Logo - Sol Üst Köşe */}
           <div className="absolute top-4 left-4 z-10">
-            <div className="relative w-20 h-20 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2">
+            <div className="relative w-20 h-20 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
               <Image
                 src={game.logo}
                 alt={`${game.title} Logo`}
@@ -86,11 +86,6 @@ export default function GameCard({ game }: GameCardProps) {
               </span>
             ))}
           </div>
-        </div>
-
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-          <span className="text-white font-semibold">Detayları Gör →</span>
         </div>
       </div>
     </Link>
