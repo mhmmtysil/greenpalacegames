@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Game } from '@/lib/games';
 
 interface GameCardProps {
@@ -23,11 +24,32 @@ export default function GameCard({ game }: GameCardProps) {
       <div className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
         {/* Image */}
         <div className="relative h-64 bg-gradient-to-br from-purple-500 to-blue-600 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center text-white text-6xl font-bold opacity-20">
-            {game.title.charAt(0)}
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src={game.image}
+              alt={game.title}
+              fill
+              className="object-cover"
+              unoptimized
+            />
+          </div>
+          
+          {/* Logo - Sol Üst Köşe */}
+          <div className="absolute top-4 left-4 z-10">
+            <div className="relative w-20 h-20 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2">
+              <Image
+                src={game.logo}
+                alt={`${game.title} Logo`}
+                width={64}
+                height={64}
+                className="object-contain"
+                unoptimized
+              />
+            </div>
           </div>
           {/* Status Badge */}
-          <div className="absolute top-4 right-4">
+          <div className="absolute top-4 right-4 z-10">
             <span className={`${statusColors[game.status]} text-white text-xs font-semibold px-3 py-1 rounded-full`}>
               {statusText[game.status]}
             </span>

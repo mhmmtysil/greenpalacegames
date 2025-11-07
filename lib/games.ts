@@ -4,6 +4,7 @@ export interface Game {
   description: string;
   shortDescription: string;
   image: string;
+  logo: string;
   category: string;
   platform: string[];
   releaseDate: string;
@@ -16,35 +17,28 @@ export interface Game {
 export const games: Game[] = [
   {
     id: '1',
-    title: 'Fantasy Quest',
-    shortDescription: 'Büyülü bir dünyada epik macera',
-    description: 'Büyülü bir dünyada unutulmaz bir maceraya atılın. Ejderhalarla savaşın, hazineler bulun ve krallığı kurtarın.',
-    image: '/games/fantasy-quest.jpg',
-    category: 'RPG',
-    platform: ['PC', 'Mobile'],
+    title: 'Kelime İmparatoru',
+    shortDescription: 'Kelime ustalarının yarıştığı bulmaca oyunu',
+    description: 'Kelime İmparatoru ile Türkçe kelime dağarcığınızı geliştirin ve zihinsel yeteneklerinizi test edin. Binlerce kelime bulmacası ile eğlenceli vakit geçirin. Her seviye giderek zorlaşan bulmacalar ve ipuçları ile dolu!',
+    image: '/games/kelimeimparatoru.webp',
+    logo: '/games/kelimeimparatorulogo.webp',
+    category: 'Kelime Oyunu',
+    platform: ['Android'],
     releaseDate: '2024',
-    status: 'in-development'
+    status: 'released',
+    playStoreLink: 'https://play.google.com/store/apps/details?id=com.GreenPalace.Kelimeimparatoru'
   },
   {
     id: '2',
-    title: 'Space Warriors',
-    shortDescription: 'Uzayda aksiyon dolu savaşlar',
-    description: 'Galaksinin en büyük savaşında tarafınızı seçin. Uzay gemilerinizi özelleştirin ve düşmanlarınızı yok edin.',
-    image: '/games/space-warriors.jpg',
-    category: 'Action',
-    platform: ['PC', 'Console'],
-    releaseDate: '2025',
-    status: 'coming-soon'
-  },
-  {
-    id: '3',
-    title: 'Puzzle Master',
-    shortDescription: 'Zihninizi zorlayan bulmacalar',
-    description: 'Yüzlerce bulmaca ile zihninizi geliştirin. Mantık ve strateji becerilerinizi test edin.',
-    image: '/games/puzzle-master.jpg',
+    title: 'Kare Doku',
+    shortDescription: 'Mantık ve strateji oyunu',
+    description: 'Kare Doku, klasik Sudoku oyununun kare versiyonu. 4x4 karelerle başlayıp 9x9 karelere kadar uzanan zorlu bulmacalar. Mantık yürütme becerilerinizi geliştirin, günlük beyin jimnastiği yapın!',
+    image: '/games/karedoku.webp',
+    logo: '/games/karedokulogo.webp',
     category: 'Puzzle',
-    platform: ['Mobile', 'Web'],
-    releaseDate: '2023',
-    status: 'released'
+    platform: ['Android'],
+    releaseDate: '2025',
+    status: 'released',
+    playStoreLink: 'https://play.google.com/store/apps/details?id=com.GreenPalaceGames.KareDoku'
   }
 ];
