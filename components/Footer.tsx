@@ -25,17 +25,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Hızlı Linkler</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/games" className="hover:text-purple-400 transition-colors">
+                <Link href="/oyunlar" className="hover:text-purple-400 transition-colors">
                   Oyunlar
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-purple-400 transition-colors">
+                <Link href="/hakkimizda" className="hover:text-purple-400 transition-colors">
                   Hakkımızda
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-purple-400 transition-colors">
+                <Link href="/iletisim" className="hover:text-purple-400 transition-colors">
                   İletişim
                 </Link>
               </li>

@@ -6,13 +6,13 @@ import { getAssetPath } from '@/lib/utils';
 
 export function generateStaticParams() {
     return games.map((game) => ({
-        id: game.id,
+        id: game.slug,
     }));
 }
 
 export default async function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
-    const game = games.find((g) => g.id === id);
+    const game = games.find((g) => g.slug === id);
 
     if (!game) {
         notFound();
@@ -116,21 +116,29 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                             {game.playStoreLink && (
                                 <a
                                     href={game.playStoreLink}
-                                    className="flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                                    className="inline-block transition-transform hover:scale-105"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Play Store
+                                    <img 
+                                        src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+                                        alt="Google Play'den alın"
+                                        className="h-16"
+                                    />
                                 </a>
                             )}
                             {game.appStoreLink && (
                                 <a
                                     href={game.appStoreLink}
-                                    className="flex-1 flex items-center justify-center gap-3 px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    className="inline-block transition-transform hover:scale-105"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    App Store
+                                    <img 
+                                        src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/tr-tr"
+                                        alt="App Store'dan indirin"
+                                        className="h-16"
+                                    />
                                 </a>
                             )}
                         </div>
@@ -140,7 +148,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                 {/* Back Button */}
                 <div className="text-center">
                     <Link
-                        href="/games"
+                        href="/oyunlar"
                         className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold"
                     >
                         <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">

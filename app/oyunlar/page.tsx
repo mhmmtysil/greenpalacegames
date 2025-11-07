@@ -11,7 +11,7 @@ export default function GamesPage() {
             Oyunlarımız
           </h1>
           <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Green Palace Games olarak geliştirdiğimiz tüm oyunları keşfedin
+            Green Palace Games olarak geliştirdiğim tüm oyunları keşfedin
           </p>
         </div>
       </section>

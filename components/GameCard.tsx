@@ -21,7 +21,7 @@ export default function GameCard({ game }: GameCardProps) {
   };
 
   return (
-    <Link href={`/games/${game.id}`}>
+    <Link href={`/oyunlar/${game.slug}`}>
       <div className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
         {/* Image */}
         <div className="relative h-64 bg-gradient-to-br from-purple-500 to-blue-600 overflow-hidden">

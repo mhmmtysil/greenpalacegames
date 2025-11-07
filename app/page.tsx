@@ -33,7 +33,7 @@ export default function Home() {
 
           <div className="text-center mt-12 animate-fade-in">
             <Link
-              href="/games"
+              href="/oyunlar"
               className="inline-block px-8 py-4 bg-purple-600 text-white rounded-full font-semibold text-lg hover:bg-purple-700 transition-all transform hover:scale-105 shadow-lg"
             >
               Tüm Oyunları Gör
@@ -51,7 +51,7 @@ export default function Home() {
               <div className="text-xl text-gray-600 dark:text-gray-400">Yayında Oyun</div>
             </div>
             <div className="p-8 animate-scale-in animate-delay-200">
-              <div className="text-5xl font-bold text-purple-600 mb-2">50K+</div>
+              <div className="text-5xl font-bold text-purple-600 mb-2">500+</div>
               <div className="text-xl text-gray-600 dark:text-gray-400">Aktif Oyuncu</div>
             </div>
             <div className="p-8 animate-scale-in animate-delay-300">
@@ -72,7 +72,7 @@ export default function Home() {
             Sorularınız mı var? İşbirliği yapmak mı istiyorsunuz? Hemen ulaşın!
           </p>
           <Link
-            href="/contact"
+            href="/iletisim"
             className="inline-block px-8 py-4 bg-white text-purple-600 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-2xl"
           >
             İletişime Geç

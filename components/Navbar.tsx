@@ -29,19 +29,19 @@ export default function Navbar() {
               Ana Sayfa
             </Link>
             <Link 
-              href="/games" 
+              href="/oyunlar" 
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               Oyunlar
             </Link>
             <Link 
-              href="/about" 
+              href="/hakkimizda" 
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               Hakkımızda
             </Link>
             <Link 
-              href="/contact" 
+              href="/iletisim" 
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               İletişim
@@ -82,21 +82,21 @@ export default function Navbar() {
               Ana Sayfa
             </Link>
             <Link 
-              href="/games" 
+              href="/oyunlar" 
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Oyunlar
             </Link>
             <Link 
-              href="/about" 
+              href="/hakkimizda" 
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Hakkımızda
             </Link>
             <Link 
-              href="/contact" 
+              href="/iletisim" 
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
