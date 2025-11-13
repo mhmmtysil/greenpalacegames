@@ -31,74 +31,107 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-            {/* Header */}
-            <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">
-                <div className="max-w-5xl mx-auto">
-                    <div className="flex items-center gap-4 mb-3">
-                        <div className="relative w-16 h-16 bg-white dark:bg-gray-900 rounded-xl shadow-lg flex items-center justify-center p-2">
-                            <Image
-                                src={getAssetPath(game.logo)}
-                                alt={`${game.title} Logo`}
-                                width={48}
-                                height={48}
-                                className="object-contain"
-                            />
+        <div className="min-h-screen bg-gray-50">
+            {/* Hero Image Section */}
+            <section className="py-8">
+                <div className="max-w-5xl mx-auto px-4">
+                    {/* Image Only */}
+                    <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <Image
+                            src={getAssetPath(game.image)}
+                            alt={game.title}
+                            width={1200}
+                            height={400}
+                            className="w-full h-auto object-cover"
+                            priority
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Content Section */}
+            <section className="bg-white py-16">
+                <div className="max-w-5xl mx-auto px-4">
+                    <div className="flex items-center gap-6 mb-6">
+                        {/* Logo */}
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-400 rounded-3xl blur-xl opacity-40"></div>
+                            <div className="relative w-28 h-28 bg-white rounded-3xl shadow-2xl flex items-center justify-center p-4 border border-gray-200">
+                                <Image
+                                    src={getAssetPath(game.logo)}
+                                    alt={`${game.title} Logo`}
+                                    width={80}
+                                    height={80}
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <span className={`${statusColors[game.status]} text-white text-xs font-semibold px-3 py-1 rounded-full`}>
+
+                        {/* Status Badge */}
+                        <div className={`${statusColors[game.status]} text-white text-sm font-bold px-6 py-3 rounded-full shadow-lg`}>
+                            <span className="flex items-center gap-2">
+                                <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                                 {statusText[game.status]}
                             </span>
                         </div>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+
+                    {/* Title & Description */}
+                    <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-4">
                         {game.title}
                     </h1>
-                    <p className="text-lg text-gray-100">
+                    <p className="text-xl text-gray-600 max-w-3xl mb-8">
                         {game.shortDescription}
                     </p>
                 </div>
             </section>
 
-            {/* Content */}
-            <div className="max-w-5xl mx-auto px-4 py-16">
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                        <div>
-                            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Kategori</h3>
-                            <p className="text-lg font-bold text-gray-900 dark:text-white">{game.category}</p>
-                        </div>
-                        <div>
-                            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Platformlar</h3>
-                            <div className="flex flex-wrap gap-2">
-                                {game.platform.map((platform) => (
-                                    <span
-                                        key={platform}
-                                        className="text-sm bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full"
-                                    >
-                                        {platform}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                        <div>
-                            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Çıkış Tarihi</h3>
-                            <p className="text-lg font-bold text-gray-900 dark:text-white">{game.releaseDate}</p>
+            {/* Game Info and Details */}
+            <div className="max-w-5xl mx-auto px-4 pb-12">
+                {/* Game Info Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-20 mb-12 relative z-10">
+                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                        <h3 className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Kategori</h3>
+                        <p className="text-2xl font-bold text-gray-900">
+                            {game.category}
+                        </p>
+                    </div>
+                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                        <h3 className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Platformlar</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {game.platform.map((platform) => (
+                                <span
+                                    key={platform}
+                                    className="text-sm bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold px-4 py-2 rounded-xl shadow-lg"
+                                >
+                                    {platform}
+                                </span>
+                            ))}
                         </div>
                     </div>
-
-                    <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
-                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Oyun Hakkında</h2>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-                            {game.description}
+                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+                        <h3 className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Çıkış Tarihi</h3>
+                        <p className="text-2xl font-bold text-gray-900">
+                            📅 {game.releaseDate}
                         </p>
                     </div>
                 </div>
 
+                {/* Description */}
+                <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-100">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span className="w-1.5 h-8 bg-gradient-to-b from-purple-600 to-blue-600 rounded-full"></span>
+                        Oyun Hakkında
+                    </h2>
+                    <p className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">
+                        {game.description}
+                    </p>
+                </div>
+
                 {/* Download Links */}
                 {game.status === 'released' && (
-                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">
-                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Oyunu İndir</h2>
+                    <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-6">Oyunu İndir</h2>
                         <div className="flex flex-col sm:flex-row gap-4">
                             {game.steamLink && (
                                 <a
@@ -120,7 +153,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <img 
+                                    <img
                                         src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
                                         alt="Google Play'den alın"
                                         className="h-16"
@@ -134,7 +167,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <img 
+                                    <img
                                         src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/tr-tr"
                                         alt="App Store'dan indirin"
                                         className="h-16"
@@ -149,7 +182,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
                 <div className="text-center">
                     <Link
                         href="/oyunlar"
-                        className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold"
+                        className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
                     >
                         <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M15 19l-7-7 7-7"></path>

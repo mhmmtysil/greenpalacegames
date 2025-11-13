@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -15,7 +15,7 @@ export default function Navbar() {
             <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">GP</span>
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white">
+            <span className="text-xl font-bold text-gray-900">
               Green Palace Games
             </span>
           </Link>
@@ -24,25 +24,25 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Ana Sayfa
             </Link>
             <Link 
               href="/oyunlar" 
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Oyunlar
             </Link>
             <Link 
               href="/hakkimizda" 
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Hakkımızda
             </Link>
             <Link 
               href="/iletisim" 
-              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               İletişim
             </Link>
@@ -51,10 +51,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
           >
             <svg
-              className="w-6 h-6 text-gray-700 dark:text-gray-300"
+              className="w-6 h-6 text-gray-700"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -76,28 +76,28 @@ export default function Navbar() {
           <div className="md:hidden py-4 space-y-2">
             <Link 
               href="/" 
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Ana Sayfa
             </Link>
             <Link 
               href="/oyunlar" 
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Oyunlar
             </Link>
             <Link 
               href="/hakkimizda" 
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               Hakkımızda
             </Link>
             <Link 
               href="/iletisim" 
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               İletişim
